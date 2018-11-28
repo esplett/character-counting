@@ -1,15 +1,21 @@
-function unique_char(str1) {
-  var str=str1;
-  var uniql="";
-  for (var x=0; x <str.length; x++) {
-    if(uniql.indexOf(str.charAt(x))==-1)
-    {
-      uniql += str[x];
-    }
-  }
-  return uniql;
+function countLetters(count){
+ var object = {}
+
+for (const x of count) {
+
+if (x === " ") {
+
+ } else if (object[x] === undefined) {
+   object[x] = 1
+ } else {
+   object[x] ++
+ }
+
 }
-console.log(unique_char("lighthouse in the house"));
+return object
+}
+
+console.log(countLetters("This is a test string"))
 
 // -countLetters return unique characters that exist in a
 // string that is passed into a function
